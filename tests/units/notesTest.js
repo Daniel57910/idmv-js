@@ -29,6 +29,15 @@ function addNewNote() {
   assert.isTrue(notesCollection._notes[0] === "TEST");
 }
 
+function viewNotes() {
+  const testNote = notesCollection;
+  testNote.newNote('very very very long texttttttt').newNote('another veeeeeeeryyyyyyyyyy long note').newNote('one two three four five six seven eight').newNote('x');
+  let allNotes = testNote.allNotes();
+  let testNotes = ['very very very long ', 'another veeeeeeeryyy', 'one two three four f'];
+  assert.isTrue(allNotes.join('') === testNotes.join('');
+}
+
 sampleTest();
 checkInit();
 addNewNote();
+viewNotes();
