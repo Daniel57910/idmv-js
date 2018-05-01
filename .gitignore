@@ -1,3 +1,7 @@
 node_modules/
 bin/
 ./package-lock.json
+
+scoreController = require('./controllers/scoreController');
+ScoreController { frame: [], total: [ 0 ] }
+scoreController.getTheScore(3, 2);
