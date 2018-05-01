@@ -24,11 +24,21 @@ function checkInit () {
 
 function addNewNote() {
   let testNote = notesCollection;
+  testNote.reset();
   testNote.newNote("TEST");
   assert.isTrue(notesCollection._notes.length === 1);
   assert.isTrue(notesCollection._notes[0] === "TEST");
 }
 
+function viewNotes() {
+  const testNote = notesCollection;
+  testNote.reset();
+  testNote.newNote('very very very long texttttttt').newNote('another veeeeeeeryyyyyyyyyy long note').newNote('one two three four five six seven eight').newNote('x');
+  let testNotes = [ 'very very very long ','another veeeeeeeryyy','one two three four f','x' ];
+  assert.isTrue(testNote.allNotes().join('') === testNotes.join(''));
+}
+
 sampleTest();
 checkInit();
 addNewNote();
+viewNotes();
