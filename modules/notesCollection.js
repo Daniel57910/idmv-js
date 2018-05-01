@@ -2,6 +2,11 @@ function notesCollection() {
   this._notes = [];
 }
 
+notesCollection.prototype.reset = function() {
+  this._notes = [];
+  return this;
+};
+
 notesCollection.prototype.newNote = function(text) {
   this._notes.push(text);
   return this;
