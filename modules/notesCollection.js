@@ -1,6 +1,5 @@
 function notesCollection() {
   this._notes = [];
-  this._shortNotes = [];
 }
 
 notesCollection.prototype.newNote = function(text) {
@@ -9,8 +8,7 @@ notesCollection.prototype.newNote = function(text) {
 };
 
 notesCollection.prototype.allNotes = function() {
-  this._shortNotes = this._notes.map(notes => notes.slice(0,20));
-  return this;
+   return this._notes.map(notes => notes.slice(0,20));
 };
 
 module.exports = notesCollection = new notesCollection();
