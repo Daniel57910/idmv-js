@@ -19,7 +19,7 @@ notesCollection.prototype.allNotes = function() {
 notesCollection.prototype.showNote = function(index) {
   return this._notes[index];
 }
-
+ 
 note = new notesCollection();
 note.newNote("abcdefgh");
 note.newNote("axbcdkwlcwcoiw");
