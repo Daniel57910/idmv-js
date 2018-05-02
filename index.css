@@ -1,0 +1,15 @@
+.new {
+  width: 30%;
+  display: block;
+  margin: auto;
+}
+#noteButton {
+  background-color: #608f9f;
+  color: white;
+  height: 2em;
+  cursor: pointer;
+}
+
+#noteButton:hover {
+  background-color: #409fbf;
+}

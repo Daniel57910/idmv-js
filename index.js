@@ -1,7 +1,8 @@
-let notes = window.notesCollection();
-console.log(notes);
-
-document.getElementById('noteButton').onclick = function () {
-  let test = document.getElementById('noteArea').value;
-  console.log(notes);
-}
+var notes = window.notesCollection;
+window.onload = function() {
+  document.getElementById('noteButton').addEventListener('click', function() {
+  for(let i in notes) { console.log(i, notes.i); };
+  notes.newNote('alpha');
+  console.log(notes.allNotes());
+  });
+};
