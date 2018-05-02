@@ -16,8 +16,9 @@
       return notes[index];
     };
     
-};
+}
 
-exports.notesCollection = new notesCollection();
+  exports.notesCollection = new notesCollection();
+  exports.notesConstructor = notesCollection;
 
 })(this);
