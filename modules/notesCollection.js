@@ -16,6 +16,7 @@ notesCollection.prototype.allNotes = function() {
    return this._notes.map(notes => notes.slice(0,20));
 };
 
+<<<<<<< HEAD
 notesCollection.prototype.showNote = function(index) {
   return this._notes[index];
 }
@@ -25,6 +26,8 @@ note.newNote("abcdefgh");
 note.newNote("axbcdkwlcwcoiw");
 console.log(note.showNote(0));
 
+=======
+>>>>>>> fa82c8d94908106246bd6061f526041d5b97212c
 module.exports = notesCollection = new notesCollection();
 
 
