@@ -1,6 +1,6 @@
 (function(exports) {
   
-   exports.notesCollection = function() {
+  function notesCollection() {
     let notes = [];
     
     this.newNote = function(text) {
@@ -17,5 +17,6 @@
     };
     
 };
+  exports.notesCollection = new notesCollection();
 
 })(this);
