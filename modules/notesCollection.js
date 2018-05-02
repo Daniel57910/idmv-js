@@ -18,7 +18,4 @@
     
 };
 
-notes = new notesCollection();
-console.log(notes);
-
 })(this);

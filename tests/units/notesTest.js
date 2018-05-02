@@ -1,4 +1,4 @@
-const notesCollection = require("../../modules/notesCollection");
+const imports = require("../../modules/notesCollection");
 
 const Assert = function () {};
 
@@ -19,28 +19,28 @@ function sampleTest () {
 }
 
 function checkInit () {
-  assert.isTrue(notesCollection.allNotes().length === 0);
+  let notes = new imports.notesCollection();
+  assert.isTrue(notes.allNotes().length === 0);
 }
 
-function addNewNote() {
-  notesCollection.reset();
-  
-  notesCollection.newNote("TEST");
-  assert.isTrue(notesCollection.allNotes().length === 1);
-  assert.isTrue(notesCollection.showNote(0) === "TEST");
+function addNewNote() {  
+  let notes = new imports.notesCollection();
+  notes.newNote("TEST");
+  assert.isTrue(notes.allNotes().length === 1);
+  assert.isTrue(notes.showNote(0) === "TEST");
 }
 
 function viewNotes() {
-  notesCollection.reset();
-  notesCollection.newNote('very very very long texttttttt').newNote('another veeeeeeeryyyyyyyyyy long note').newNote('one two three four five six seven eight').newNote('x');
+  let notes = new imports.notesCollection();
+  notes.newNote('very very very long texttttttt').newNote('another veeeeeeeryyyyyyyyyy long note').newNote('one two three four five six seven eight').newNote('x');
   let notesCollections = [ 'very very very long ','another veeeeeeeryyy','one two three four f','x' ];
-  assert.isTrue(notesCollection.allNotes().join('') === notesCollections.join(''));
+  assert.isTrue(notes.allNotes().join('') === notesCollections.join(''));
 }
 
 function showNote() {
-  notesCollection.reset();
-  notesCollection.newNote('very very very long texttttttt').newNote('another veeeeeeeryyyyyyyyyy long note').newNote('one two three four five six seven eight').newNote('x');
-  assert.isTrue(notesCollection.showNote(2) === 'one two three four five six seven eight');
+  let notes = new imports.notesCollection();
+  notes.newNote('very very very long texttttttt').newNote('another veeeeeeeryyyyyyyyyy long note').newNote('one two three four five six seven eight').newNote('x');
+  assert.isTrue(notes.showNote(2) === 'one two three four five six seven eight');
 }
 
 sampleTest();
