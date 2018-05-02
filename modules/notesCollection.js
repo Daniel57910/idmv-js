@@ -18,5 +18,6 @@
     
 };
   exports.notesCollection = new notesCollection();
+  exports.notesConstructor = notesCollection;
 
 })(this);
