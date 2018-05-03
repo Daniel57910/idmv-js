@@ -15,7 +15,8 @@ function addNewNote() {
 
 function showAllNotes() {
   let allNotes = notes.allNotes();
-  allNotes = allNotes.join("<br>");
+  //allNotes = allNotes.join("<br>");
   console.log(allNotes);
-  document.getElementById('all_notes').innerHTML = allNotes;
+  document.getElementById('all_notes').innerHTML = allNotes.map((note, index) => "<li id = "+ index">" note+"<br></li>"));
+  //document.getElementById('all_notes').innerHTML = allNotes;
 }
