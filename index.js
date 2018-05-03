@@ -18,7 +18,7 @@ function showAllNotes() {
   let allNotes = notes.allNotes();
   console.log(allNotes);
   document.getElementById('all_notes').innerHTML = allNotes.map((note) => 
-  "<li id = " + index++ + '>' + note + '</li>');
+  "<li id = " + index++ + '>' + note + '</li>').join('');
 }
 
 //research event.preventDefault
