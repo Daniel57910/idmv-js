@@ -1,17 +1,7 @@
 const imports = require("../../modules/notesCollection");
-
-const Assert = function () {};
-
-Assert.prototype.isTrue = function (assertionToCheck) {
-  if (!assertionToCheck) {
-    throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
-  }
-  else {
-    console.log("SUCCESS!");
-  }
-};
-
-const assert = new Assert();
+const assert = require("../testLibrary");
+console.log(assert);
+assert.evaluation.isTrue(5 === 5);
 
 function sampleTest () {
   let five = 5;
